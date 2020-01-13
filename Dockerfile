@@ -1,4 +1,6 @@
-FROM postgres:9.6
+FROM postgres:10.11 
+RUN apt-get update -y
+RUN apt-get install inetutils-ping -y
 MAINTAINER Daniel Dent (https://www.danieldent.com)
 ENV PG_MAX_WAL_SENDERS 8
 ENV PG_WAL_KEEP_SEGMENTS 8
